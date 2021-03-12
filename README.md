@@ -6,9 +6,6 @@ Create a webpage, with 10 user in it with a login id and password credential sys
 
 #### Node.js, Express, HTML, Bootstrap, SQLite3(Database)
 
-## Priview(Video)
-
-
-https://user-images.githubusercontent.com/56115629/110804241-fd8ca600-82a5-11eb-9d3e-0c35dc1dce8b.mp4
+#### Link : https://myfriends-task.herokuapp.com/login
 
 
