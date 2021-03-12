@@ -8,7 +8,7 @@ const session = require('express-session');
 const methodOverride = require('method-override');
 
 const sequelize = require('./database/sequelize');
-sequelize.sync();
+// sequelize.sync();
 
 
 const indexRouter = require('./routes/index');
