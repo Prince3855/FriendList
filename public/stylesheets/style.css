@@ -4,8 +4,8 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'Baloo Bhai 2', cursive;
-  height:100vh;
-  overflow:auto;
+  height:100%;
+  overflow:scroll;
 }
 
 a {
