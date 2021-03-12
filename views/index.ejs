@@ -1,7 +1,7 @@
 <%- include('partials/navbar') %>
 
-<div class="alert alert-secondary m-0 text-center" role="alert"> <i class='fas fa-user-alt mr-1'></i><b><%= currentUser %></b> </div>
-<div class="alert alert-secondary m-0 text-center" role="alert"><i class="fas fa-envelope mr-1"></i><b><%= email %></b> </div>
+<div class="alert alert-secondary m-0 text-center" role="alert"> <i class="bi bi-person-circle mr-1"></i><b><%= currentUser %></b> </div>
+<div class="alert alert-secondary m-0 text-center" role="alert"><i class="bi bi-envelope-fill mr-1"></i><b><%= email %></b> </div>
 
     <div class="container my-2 bg-light pt-2">
         <h6 class="text-center">My friend List</h6>
@@ -10,7 +10,7 @@
               <% if(friend!= " "){ %>
                 <button class="btn btn-outline-dark">
                   <%= friend %>
-                    <a href="/removefriend/<%= friend %>" class="text-primary"><i class='fas fa-trash-alt ml-2'></i></a>
+                    <a href="/removefriend/<%= friend %>" class="text-primary"><i class="bi bi-trash-fill"></i></a>
                 </button>
               <% } %>
               
