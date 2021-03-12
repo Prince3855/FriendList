@@ -1,0 +1,42 @@
+<%- include('partials/navbar') %>
+
+<div class="alert alert-secondary m-0 text-center" role="alert"> <i class='fas fa-user-alt mr-1'></i><b><%= currentUser %></b> </div>
+<div class="alert alert-secondary m-0 text-center" role="alert"><i class="fas fa-envelope mr-1"></i><b><%= email %></b> </div>
+
+    <div class="container my-2 bg-light pt-2">
+        <h6 class="text-center">My friend List</h6>
+        <p class="bg-light py-2 text-center">
+            <% friends.forEach((friend) => { %>
+              <% if(friend!= " "){ %>
+                <button class="btn btn-outline-dark">
+                  <%= friend %>
+                    <a href="/removefriend/<%= friend %>" class="text-primary"><i class='fas fa-trash-alt ml-2'></i></a>
+                </button>
+              <% } %>
+              
+                
+            <% }); %>
+        </p>
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center">
+        <form action="/addfriend?_method=put" method="POST">
+            <div class="form-row align-items-center">
+              <div class="col-auto">
+                <label class="sr-only" for="handle">Username</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">@</div>
+                  </div>
+                  <input type="text" class="form-control" id="handle" placeholder="Username" name="handle">
+                </div>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-outline-success btn-sm mb-2">Add Friend</button>
+              </div>
+            </div>
+          </form>
+    </div>
+
+<%- include('partials/footer') %>
+

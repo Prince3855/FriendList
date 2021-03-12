@@ -1,0 +1,45 @@
+<%- include('partials/navbar') %>
+
+<!-- <form action="/register" method="post">
+    <input type="text" name="userName">
+    <input type="text" name="email">
+    <input type="password" name="password">
+    <input type="password" name="confirmPassword">
+    <button type="submit">Register</button>
+</form> -->
+
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6 col-10 mx-auto">
+
+            <form action="/register" method="POST">
+                <div class="form-group mb-3">
+                    <label for="userName">Username</label>
+                    <input type="text" class="form-control" name="userName" placeholder="Username" pattern=".{4,}" title="Four or more characters" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="userName">Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Password" pattern=".{6,}" title="Six or more characters" required />
+                </div>
+                <div class="form-group mb-3">
+                    <label for="confirmPassword">confirm Password</label>
+                    <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" required />
+                </div>
+
+                <div class="form-group my-2">
+                    <button type="submit" class="btn btn-danger btn-lg btn-block py-0">Register</button>
+                </div>
+                <div class="form-group my-2">
+                    <p>Already have Account? <a href="/login">Login Here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
