@@ -6,10 +6,14 @@ const logger = require('morgan');
 const Sequelize = require('sequelize');
 const session = require('express-session');
 const methodOverride = require('method-override');
+const { asyncErrorHandler } = require('./middleware/index');
+const createUser = require('./seeds');
+
 
 const sequelize = require('./database/sequelize');
 sequelize.sync();
 
+asyncErrorHandler(createUser());
 
 const indexRouter = require('./routes/index');
 
